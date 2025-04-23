@@ -1,0 +1,10 @@
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (1, 'Bahuang', 1, 7, 1);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (2, 'Margorejo', 1, 8, 2);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (3, 'Tabwakea Village', 2, 8, 3);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (4, 'Tangub', 1, 7, 4);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (5, 'Conceição da Barra', 1, 7, 5);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (6, 'Wawa', 3, 6, 6);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (7, 'Espírito Santo do Pinhal', 1, 7, 7);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (8, 'Igir-igir', 1, 9, 8);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (9, 'Solok Timur', 2, 9, 9);
+insert into cinemas (id, name, open_Hour, close_Hour, Id_city) values (10, 'Kórnik', 1, 10, 10);

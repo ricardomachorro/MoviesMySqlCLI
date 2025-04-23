@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
 
 
 
-def select_movies():
+def select_all_movies():
     mycursor = mydb.cursor()
     mycursor.execute("Select * from Movies")
     myresult = mycursor.fetchall()
@@ -18,4 +18,25 @@ def select_movies():
         print("Id:"+str(movie[0]) +" , title:"+ movie[1])
 
 
-select_movies()
+def select_all_billdoards():
+    mycursor = mydb.cursor()
+    mycursor.execute("Select * from Billboards inner join Movies "+
+                     "on Billboards.Id_Cinema = Movies.Id inner join "+
+                     "Cinemas on Billboards.Id_Cinema = Cinemas.Id ")
+    myresult = mycursor.fetchall()
+    for billboard in myresult:
+        print("Id:"+billboard[0])
+
+def select_all_cities():
+    mycursor = mydb.cursor()
+    mycursor.execute("select * from Cities")
+    myresults = mycursor.fetchall()
+    for city in myresults:
+        print("Id:"+city[0])
+
+def select_all_states():
+    mycursor = mydb.cursor()
+    mycursor.execute("select * from States")
+    myresutls = mycursor.fetchall()
+    for state in myresutls:
+        print("Id:"+state[0]+" name:"+state[1])

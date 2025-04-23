@@ -1,0 +1,10 @@
+insert into cities (id,id_state, name) values (1,2,'Yahe');
+insert into cities (id,id_state, name) values (2,4, 'Papilawe');
+insert into cities (id,id_state, name) values (3,5, 'Lidzbark');
+insert into cities (id,id_state, name) values (4,2, 'Mevo horon');
+insert into cities (id,id_state, name) values (5,1, 'Jacksonville');
+insert into cities (id,id_state, name) values (6,2, 'Zhaxi');
+insert into cities (id,id_state, name) values (7,8,'Kebunkelapa');
+insert into cities (id,id_state, name) values (8,3, 'Katrineholm');
+insert into cities (id,id_state, name) values (9,11, 'Timurlorong');
+insert into cities (id,id_state, name) values (10, 10,'Silodakon');
