@@ -20,7 +20,20 @@ def mostrar_menu():
 
 
 def menu_billboards():
-    print("Billboard Menu")
+    print("\n Billboard Menu \n")
+    print("A) Check all the billboards \n")
+    print("B) Check billboards by city \n")
+    print("C) Enter new billboard \n")
+    print("D) Update billboard \n")
+    print("D) Delete billboard \n ")
+
+    option = input()
+
+    if(option == "A"):
+        sql_connection.select_all_billdoards()
+    elif (option == "B"):
+        pass
+
 
 def menu_cinemas():
     print("Cinemas menu")
@@ -32,7 +45,17 @@ def menu_movies():
     print("Movies menu")
 
 def menu_states():
-    print("Menu states")
+    print("\n States Menu \n")
+    print("A) Check all the states \n")
+    print("B) Enter new state \n")
+    print("C) Update state \n")
+    print("D) Delete state \n ")
+
+    option = input()
+
+    if(option == "A"):
+        sql_connection.select_all_states()
+
 
 def menu_tickets():
     print("Menu tickets")

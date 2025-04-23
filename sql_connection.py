@@ -39,4 +39,4 @@ def select_all_states():
     mycursor.execute("select * from States")
     myresutls = mycursor.fetchall()
     for state in myresutls:
-        print("Id:"+state[0]+" name:"+state[1])
+        print("Id:"+str(state[0])+" name:"+state[1])
