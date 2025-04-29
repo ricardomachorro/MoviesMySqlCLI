@@ -16,6 +16,9 @@ def select_all_movies():
 
     for movie in myresult:
         print("Id:"+str(movie[0]) +" , title:"+ movie[1])
+    
+    mycursor.close()
+    mydb.close()
 
 
 def select_all_billdoards():
@@ -26,6 +29,9 @@ def select_all_billdoards():
     myresult = mycursor.fetchall()
     for billboard in myresult:
         print("Id:"+billboard[0])
+    
+    mycursor.close()
+    mydb.close()
 
 def select_all_cities():
     mycursor = mydb.cursor()
@@ -33,6 +39,9 @@ def select_all_cities():
     myresults = mycursor.fetchall()
     for city in myresults:
         print("Id:"+city[0])
+    
+    mycursor.close()
+    mydb.close()
 
 def select_all_states():
     mycursor = mydb.cursor()
@@ -40,6 +49,9 @@ def select_all_states():
     myresutls = mycursor.fetchall()
     for state in myresutls:
         print("Id:"+str(state[0])+" name:"+state[1])
+    
+    mycursor.close()
+    mydb.close()
 
 def select_billboards_by_cinema():
     pass
