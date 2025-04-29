@@ -22,7 +22,7 @@ def mostrar_menu():
 def menu_billboards():
     print("\n Billboard Menu \n")
     print("A) Check all the billboards \n")
-    print("B) Check billboards by city \n")
+    print("B) Check billboards by cinema \n")
     print("C) Enter new billboard \n")
     print("D) Update billboard \n")
     print("D) Delete billboard \n ")
@@ -32,7 +32,18 @@ def menu_billboards():
     if(option == "A"):
         sql_connection.select_all_billdoards()
     elif (option == "B"):
-        pass
+        print("Write the name of the cinema")
+        cinemaName= input()
+    elif (option == "C"):
+        movieName = input("Write the name of the movie:")
+        cinemaName = input("Write the name of the cinema:")
+        hourStart = input("Write the hour it starts:")
+        rate= input("Write the rate of the movie:")
+        price= float(input("Wtrite the price of the tickets:"))
+        sql_connection.enter_billboard(movieName,cinemaName,hourStart,rate,price)
+
+
+
 
 
 def menu_cinemas():

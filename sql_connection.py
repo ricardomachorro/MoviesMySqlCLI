@@ -40,3 +40,31 @@ def select_all_states():
     myresutls = mycursor.fetchall()
     for state in myresutls:
         print("Id:"+str(state[0])+" name:"+state[1])
+
+def select_billboards_by_cinema():
+    pass
+
+def enter_billboard(movieName,cinemaName,hourStart,rate,price):
+    idMovie = 0
+    idCinema = 0
+    idBillboard =0
+    mycursor = mydb.cursor()
+    mycursor.execute("select * from movies where Title ='" + movieName+"'")
+    idMovie = mycursor.fetchone()[0]
+
+    
+    mycursor.execute("select * from cinemas where Name = '" +cinemaName+"'")
+    idCinema = mycursor.fetchone()[0]
+
+    mycursor.execute("select count(id) from billboards")
+    idBillboard = mycursor.fetchone()[0] + 1
+    
+    insertQuery = "insert into billboards (Id,Id_Movie,Id_Cinema,Hour_Start,Rate,Price) values(%s,%s,%s,%s,%s,%s)"
+
+    
+    val =(idBillboard,idMovie,idCinema,hourStart,rate,price)
+    mycursor.execute(insertQuery,val)
+    mydb.commit()
+    mycursor.close()
+    mydb.close()
+    
