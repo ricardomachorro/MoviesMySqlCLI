@@ -32,8 +32,9 @@ def menu_billboards():
     if(option == "A"):
         sql_connection.select_all_billdoards()
     elif (option == "B"):
-        print("Write the name of the cinema")
-        cinemaName= input()
+        cinemaName= input("Write the name of the cinema:")
+        print("Billboard of cinema:" + str(cinemaName))
+        sql_connection.select_billboards_by_cinema(cinemaName)
     elif (option == "C"):
         movieName = input("Write the name of the movie:")
         cinemaName = input("Write the name of the cinema:")

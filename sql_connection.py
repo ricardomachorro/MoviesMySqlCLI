@@ -80,3 +80,17 @@ def enter_billboard(movieName,cinemaName,hourStart,rate,price):
     mycursor.close()
     mydb.close()
     
+
+def select_billboards_by_cinema(cinemaName):
+    mycursor = mydb.cursor()
+    mycursor.execute(" select * from billboards " \
+    "inner join cinemas on billboards.Id_Cinema = cinemas.id " \
+    "inner join movies on billboards.Id_movie = movies.id where cinemas.Name='"+cinemaName+"'")
+    moviesList = mycursor.fetchall()
+    for movie in moviesList:
+        movieTitle= movie[12]
+        hourStart = movie[3]
+        rate = movie[4]
+        price = movie[5]
+
+        print("Movie:"+movieTitle+" Hour start:"+str(hourStart)+" Rate:"+rate+" Price:"+str(price)+" \n")
